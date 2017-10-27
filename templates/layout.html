@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website</title>
+  <meta id="siteDescription" name="description" content="Site desctiption">
+  <meta name="author" content="Obviouslee Marketing">
+
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+  <base href="/">
+  <meta name="fragment" content="!">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    window.prerenderReady = false;
+  </script>
+
+  <script type="text/javascript">
+    function setUserAgent(window, userAgent) {
+      if (window.navigator.userAgent != userAgent) {
+        var userAgentProp = {
+          get: function() {
+            return userAgent;
+          }
+        };
+        try {
+          Object.defineProperty(window.navigator, 'userAgent', userAgentProp);
+        } catch (e) {
+          window.navigator = Object.create(navigator, {
+            userAgent: userAgentProp
+          });
+        }
+      }
+    }
+    if (navigator.userAgent.indexOf('Prerender') !== -1) {
+      setUserAgent(window, navigator.userAgent + 'chrome');
+    }
+  </script>
+
+</head>
+
+<body class="full-intro">
+  <!-- [if lt IE 8]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+  <div class="canvas">
+  <div ui-view>
+    <!-- APP SITS HERE -->
+  </div>
+</div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="vendor.bundle.js"></script>
+  <script type="text/javascript" src="app.bundle.js"></script>
+
+</body>
+
+</html>

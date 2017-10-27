@@ -1,0 +1,27 @@
+{
+  "name": "site",
+  "description": "site",
+  "scripts": {
+  },
+  "env": {
+    "MAILGUN_PASS": {
+      "required": false
+    },
+    "MAILGUN_USER": {
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "ssl"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

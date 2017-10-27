@@ -1,0 +1,24 @@
+{
+  "name": "Citibot Making Cities & Counties Accessible for All",
+  "short_name": "citibot",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/img/apple-icon-57x57",
+      "sizes": "57x57",
+      "type": "png"
+    },
+    {
+      "src": "img/android-icon-192x192",
+      "sizes": "192x192",
+      "type": "png"
+    }
+  ],
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "natural"
+}
