@@ -1,5 +1,5 @@
 <header id="header">
-  <nav class="navbar fixed-top" id="nav">
+  <nav class="navbar fixed-top navbar-expand-lg" id="nav">
     <div class="secondary-nav mobile-hide">
       <div class="container text-right">
         <ul>
@@ -10,17 +10,23 @@
       </div>
     </div>
     <div class="logo"><a href="/"><img src="/img/TFA-SC_logo.svg" alt="Teach for America - South Carolina Logo"/></a></div>
-    <div class="navbar-collapse" id="navbarToggleNav">
-      <div class="d-flex align-items-center">
+    <div class="collapse navbar-collapse" id="navbarToggleNav">
+      <div class="d-flex w-100 align-items-center">
         <ul class="navbar-nav mx-auto text-center">
-          <li class="text-right">
+          <li class="text-right mobile-hide">
             <h4>We nurture. We reimagine. We inspire.</h4>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Teaching in SC</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Teaching in SC</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Overview</a></li>
+              <li><a class="dropdown-item" href="#">What You Need to Know</a></li>
+              <li><a class="dropdown-item" href="#">Communities of SC</a></li>
+              <li><a class="dropdown-item" href="#">Regional Expenses</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Our Alumni</a>
@@ -28,19 +34,24 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Our Supporters</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Story</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Our Story</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Overview</a></li>
+              <li><a class="dropdown-item" href="#">Our Staff</a></li>
+              <li><a class="dropdown-item" href="#">Our Board</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Connect</a>
           </li>
-          <li class="nav-item apply">
+          <li class="nav-item apply mobile-hide">
             <a class="nav-link btn-apply" href="#">Apply</a>
           </li>
-          <li class="nav-item donate">
+          <li class="nav-item donate mobile-hide">
             <a class="nav-link btn-donate" href="#">Donate</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mobile-hide">
             <p>&nbsp;</p>
           </li>
         </ul>
@@ -48,11 +59,26 @@
     </div>
 
 
-  <!-- <button class="nav-main navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggleNav" aria-controls="navbarToggleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="nav-main navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggleNav" aria-controls="navbarToggleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
-  </button> -->
+  </button>
+
+</nav>
+<nav class="navbar fixed-bottom navbar-expand-lg desktop-hide" id="navButtons">
+  <div class="navbar-collapse">
+    <div class="d-flex w-100 align-items-center">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item apply">
+          <a class="nav-link btn-apply" href="#">Apply</a>
+        </li>
+        <li class="nav-item donate">
+          <a class="nav-link btn-donate" href="#">Donate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </nav>
 
