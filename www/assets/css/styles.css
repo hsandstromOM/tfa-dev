@@ -266,25 +266,25 @@ a.btn-outline-light:hover {
   border-bottom: 3px solid rgba(79,176,222,1);
 }
 #header .navbar.fixed-top ul.navbar-nav li.apply, #header .navbar.fixed-top ul.navbar-nav li.donate {
-  border-right: none;
+  border: none;
 }
 #header .navbar.fixed-top ul.navbar-nav li.apply {
   margin-left: -1px;
 }
-#header a.nav-link.btn-apply {
+#header .navbar.fixed-top a.nav-link.btn-apply {
   color: #fff;
   background-color: #4fb0de;
 }
-#header a.nav-link.btn-apply:hover {
+#header .navbar.fixed-top a.nav-link.btn-apply:hover {
   color: #fff;
   background-color: #2f8ab6;
   border-bottom: 3px solid rgba(79,176,222,0);
 }
-#header a.nav-link.btn-donate {
+#header .navbar.fixed-top a.nav-link.btn-donate {
   color: #fff;
   background-color: #efae44;
 }
-#header a.nav-link.btn-donate:hover {
+#header .navbar.fixed-top a.nav-link.btn-donate:hover {
   color: #fff;
   background-color: #e49616;
   border-bottom: 3px solid rgba(79,176,222,0);
@@ -659,31 +659,43 @@ p.social {
   left: 0;
   min-width: 100%;
 }*/
-.banner .carousel-item .first-slide {
+.banner .carousel-item .bg-slide {
   position: absolute;
-  top: -70px;
+  top: 0px;
   width: 100%;
-  height: 100%;
+  height: 600px;
+  /*height: 100%;*/
   margin: 0;
-  background: url('/img/ourstory-min.jpg') no-repeat top center fixed;
+  background-attachment: fixed !important;
+  /*background-size: cover;*/
+}
+/*.banner .carousel-item .bg-slide {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+.banner .carousel-item .bg-slide img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}*/
+.banner .carousel-item .first-slide {
+  background: url('/img/ourstory-min.jpg') no-repeat top center;
   /*background-size: cover;*/
 }
 .banner .carousel-item .second-slide {
-  position: absolute;
-  top: -70px;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background: url('/img/whysc-min.jpg') no-repeat top center fixed;
+  background: url('/img/whysc-min.jpg') no-repeat top center;
   /*background-size: cover;*/
 }
 .banner .carousel-item .third-slide {
-  position: absolute;
-  top: -70px;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background: url('/img/alumni-min.jpg') no-repeat top center fixed;
+  background: url('/img/alumni-min.jpg') no-repeat top center;
   /*background-size: cover;*/
 }
 
@@ -770,13 +782,24 @@ p.social {
     width: 50%;
     border: none;
   }
-  #header .navbar.fixed-bottom a.nav-link.btn-apply, #header .navbar.fixed-bottom a.nav-link.btn-donate {
+  #header .navbar.fixed-bottom a.nav-link.btn-apply {
+    color: #fff;
+    background-color: #4fb0de;
+    padding: 1.25rem 1.5rem;
+  }
+  #header .navbar.fixed-bottom a.nav-link.btn-donate {
+    color: #fff;
+    background-color: #efae44;
     padding: 1.25rem 1.5rem;
   }
   #header .navbar.fixed-bottom a.nav-link.btn-apply:hover {
+    color: #fff;
+    background-color: #2f8ab6;
     border-bottom: none;
   }
   #header .navbar.fixed-bottom a.nav-link.btn-donate:hover {
+    color: #fff;
+    background-color: #e49616;
     border-bottom: none;
   }
   #header .navbar.fixed-top a.nav-link {
@@ -889,11 +912,16 @@ p.social {
     /*height: calc(180vh - 70px);*/
     height: 180vh;
   }
+  .banner .carousel-item .bg-slide {
+    top: -70px;
+    height: 100%;
+    /*background-size: cover;*/
+  }
   .banner .carousel-item > img, .banner img {
     /*min-width: 0;
     width: 100%;*/
-    height: 100%;
-    width: auto;
+    /*height: 100%;*/
+    /*width: auto;*/
   }
   .banner .container, .banner .container {
   	width: 100%;
