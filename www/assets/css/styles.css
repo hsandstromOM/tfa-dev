@@ -171,7 +171,7 @@ a.btn-outline-light:hover {
   height: 145px;
   top: 0;
   border-top: 3px solid #4fb0de;
-  z-index: 10;
+  z-index: 100;
   background-color: rgba(255,255,255,.9);
 }
 #header .navbar {
@@ -378,6 +378,90 @@ a.btn-outline-light:hover {
 
 
 
+
+/* FOOTER
+-------------------------------------------------- */
+#footer > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#footer .navbar-brand {
+  width: 163px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  margin: 0 0 .5rem;
+}
+#footer .navbar-brand img {
+  vertical-align: bottom;
+}
+#footer #FooterNav-Right .navbar-brand {
+  width: 180px;
+  padding-bottom: 5px;
+}
+#footer #FooterNav-Right .navbar-brand img {
+  padding-bottom: 5px;
+}
+#footer .navbar {
+	padding: .5rem 1rem;
+	flex-flow: column nowrap;
+  align-items: flex-end;
+}
+#footer #FooterNav-Right.navbar {
+  align-items: flex-start;
+}
+#footer .col-lg-6:first-child {
+  border-right: 1px solid #e3e3e3;
+}
+#footer .navbar ul.navbar-nav {
+  color: #4fb0de;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+#footer a {
+  color: #2b4c59;
+  text-decoration: underline;
+}
+#footer a:hover {
+  color: #4fb0de;
+  text-decoration: none;
+}
+#footer a.nav-link {
+  color: #2b4c59;
+  text-decoration: none;
+}
+#footer a.nav-link:hover {
+  color: #4fb0de;
+}
+
+#footer .row.no-gutters {
+	border-top: 2px solid #2b4c59;
+}
+#footer .row.no-gutters > div {
+  flex-flow: row wrap;
+  font-family: 'quatro', verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+#footer .row.no-gutters a.nav-link {
+  color: #2b4c59;
+  text-decoration: underline;
+}
+#footer .row.no-gutters a.nav-link:hover {
+  color: #4fb0de;
+  text-decoration: none;
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+.canvas {
+	padding-top: 145px;
+}
 .ribbon {
   position: relative;
   width: 100%;
@@ -512,94 +596,14 @@ p.social {
 }
 
 
-/* FOOTER
--------------------------------------------------- */
-#footer > div {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-#footer .navbar-brand {
-  width: 163px;
-  height: 35px;
-  line-height: 35px;
-  padding: 0;
-  margin: 0 0 .5rem;
-}
-#footer .navbar-brand img {
-  vertical-align: bottom;
-}
-#footer #FooterNav-Right .navbar-brand {
-  width: 180px;
-  padding-bottom: 5px;
-}
-#footer #FooterNav-Right .navbar-brand img {
-  padding-bottom: 5px;
-}
-#footer .navbar {
-	padding: .5rem 1rem;
-	flex-flow: column nowrap;
-  align-items: flex-end;
-}
-#footer #FooterNav-Right.navbar {
-  align-items: flex-start;
-}
-#footer .col-lg-6:first-child {
-  border-right: 1px solid #e3e3e3;
-}
-#footer .navbar ul.navbar-nav {
-  color: #4fb0de;
-  font-weight: 400;
-  font-size: 9px;
-  line-height: 1;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-}
-#footer a {
-  color: #2b4c59;
-  text-decoration: underline;
-}
-#footer a:hover {
-  color: #4fb0de;
-  text-decoration: none;
-}
-#footer a.nav-link {
-  color: #2b4c59;
-  text-decoration: none;
-}
-#footer a.nav-link:hover {
-  color: #4fb0de;
-}
-
-#footer .row.no-gutters {
-	border-top: 2px solid #2b4c59;
-}
-#footer .row.no-gutters > div {
-  flex-flow: row wrap;
-  font-family: 'quatro', verdana, sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: .05em;
-}
-#footer .row.no-gutters a.nav-link {
-  color: #2b4c59;
-  text-decoration: underline;
-}
-#footer .row.no-gutters a.nav-link:hover {
-  color: #4fb0de;
-  text-decoration: none;
-}
-
-
-
 /* HOME
 -------------------------------------------------- */
 #homePage {
-  margin-top: 145px;
 }
 .carousel.banner {
   overflow: hidden;
 }
-.banner .container, .banner .container {
+.banner .container {
   width: 35%;
   display: flex;
   flex-flow: column wrap;
@@ -627,6 +631,7 @@ p.social {
   margin-right: 50px;
 }
 .banner .carousel-caption h1, .banner .banner-caption h1 {
+  margin-bottom: 0;
 }
 .banner .carousel-caption h1:before, .banner .banner-caption h1:before,
 .banner .carousel-caption h1:after, .banner .banner-caption h1:after {
@@ -646,30 +651,28 @@ p.social {
 .banner .carousel-inner, .banner .banner-inner {
 	position: relative;
 	width: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .banner .carousel-item, .banner .banner-item {
   height: 600px;
   background-color: #fff;
   width: 100%;
 }
-/*.banner .carousel-item > img, .banner img {
+.banner .carousel-item > img, .banner img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-}*/
-.banner .carousel-item .bg-slide {
+}
+/*.banner .carousel-item .bg-slide {
   position: absolute;
   top: 0px;
   width: 100%;
   height: 600px;
-  /*height: 100%;*/
   margin: 0;
   background-attachment: fixed !important;
-  /*background-size: cover;*/
 }
-/*.banner .carousel-item .bg-slide {
+.banner .carousel-item .bg-slide {
   position: fixed;
   top: -50%;
   left: -50%;
@@ -685,24 +688,19 @@ p.social {
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-}*/
+}
 .banner .carousel-item .first-slide {
   background: url('/img/ourstory-min.jpg') no-repeat top center;
-  /*background-size: cover;*/
 }
 .banner .carousel-item .second-slide {
   background: url('/img/whysc-min.jpg') no-repeat top center;
-  /*background-size: cover;*/
 }
 .banner .carousel-item .third-slide {
   background: url('/img/alumni-min.jpg') no-repeat top center;
-  /*background-size: cover;*/
-}
-
+}*/
 .banner .carousel-control-next, .banner .carousel-control-prev {
 	width: 10%;
 }
-
 
 
 /* RESPONSIVE CSS
@@ -782,15 +780,20 @@ p.social {
     width: 50%;
     border: none;
   }
+  #header .navbar.fixed-bottom a.nav-link {
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+  }
   #header .navbar.fixed-bottom a.nav-link.btn-apply {
     color: #fff;
     background-color: #4fb0de;
-    padding: 1.25rem 1.5rem;
+    /*padding: 1.25rem 1.5rem;*/
   }
   #header .navbar.fixed-bottom a.nav-link.btn-donate {
     color: #fff;
     background-color: #efae44;
-    padding: 1.25rem 1.5rem;
+    /*padding: 1.25rem 1.5rem;*/
   }
   #header .navbar.fixed-bottom a.nav-link.btn-apply:hover {
     color: #fff;
@@ -871,6 +874,9 @@ p.social {
   	font-size: 100%;
   }
 
+  .canvas {
+  	padding-top: 70px;
+  }
   .ribbon {
   	font-size: 16px;
     height: auto;
@@ -887,7 +893,7 @@ p.social {
   	border: 1px solid #4fb0de;
   }
   .billboard section {
-  	flex-flow: column wrap;
+  	flex-flow: column nowrap;
   }
   .billboard section .col-lg-7 {
     padding-top: 0;
@@ -905,31 +911,36 @@ p.social {
   	font-size: 6vw;
   }
 
-  #homePage {
-    margin-top: 70px;
+  .banner .banner-inner {
+    /*min-height: calc(180vh - 70px);*/
   }
-  .banner .carousel-item, .banner .banner-item {
-    /*height: calc(180vh - 70px);*/
-    height: 180vh;
+  .banner .banner-item {
+    /*min-height: 100vh;*/
+    height: auto;
+    z-index: 0;
   }
-  .banner .carousel-item .bg-slide {
-    top: -70px;
-    height: 100%;
-    /*background-size: cover;*/
+  /*.banner .banner-inner > div:nth-child(2) {
+    z-index: 2;
+  }*/
+  .banner .banner-item > img {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    min-width: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    object-fit: cover;
   }
-  .banner .carousel-item > img, .banner img {
-    /*min-width: 0;
-    width: 100%;*/
-    /*height: 100%;*/
-    /*width: auto;*/
-  }
-  .banner .container, .banner .container {
+  .banner .container {
+    position: relative;
   	width: 100%;
-    height: 80vh;
-  	flex-flow: row wrap;
+    /*min-height: 100vh;*/
+  	/*flex-flow: row wrap;*/
+    justify-content: center;
   	min-width: 0;
-  	padding: 50px 0;
-    margin-top: calc(100vh - 70px);
+  	/*padding: 50px 0;*/
+    /*margin-top: calc(100vh - 0px);*/
+    text-align: center;
   }
   .banner .carousel-caption, .banner .banner-caption {
   	flex-flow: column nowrap;
