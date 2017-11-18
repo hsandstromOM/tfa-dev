@@ -66,12 +66,11 @@
        <span class="sr-only">Next</span>
      </a>
 </div>
-
 <div class="banner desktop-hide">
   <div class="banner-inner">
     <div class="banner-item">
       <img src="img/ourstory-min.jpg" alt="Our Story">
-      <div class="container">
+      <div id="section1" class="container">
         <div class="banner-caption">
           <h1>Be a part of our story</h1>
         </div>
@@ -94,6 +93,37 @@
       </div>
     </div>
   </div>
+  <script>
+  // Create cross browser requestAnimationFrame method:
+  window.requestAnimationFrame = window.requestAnimationFrame
+                                 || window.mozRequestAnimationFrame
+                                 || window.webkitRequestAnimationFrame
+                                 || window.msRequestAnimationFrame
+                                 || function(f){setTimeout(f, 1000/60)}
+
+  var section1 = document.getElementById('section1')
+
+  var scrollheight = 	document.body.scrollHeight // height of entire document
+  var windowheight = window.innerHeight // height of browser window
+
+
+  function parallax(){
+  	var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
+  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 50 // get amount scrolled (in %)
+  	section1.style.top = -scrolltop * .2 + 'px' // move bubble1 at 20% of scroll speed
+
+  }
+
+  window.addEventListener('scroll', function(){ // on page scroll
+  	requestAnimationFrame(parallax) // call parallaxbubbles() on next available screen repaint
+  }, false)
+
+  window.addEventListener('resize', function(){ // on window resize
+  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 100 // get amount scrolled (in %)
+  }, false)
+
+
+  </script>
 </div>
 
 
