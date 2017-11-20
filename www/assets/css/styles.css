@@ -10,7 +10,6 @@ html {
   padding: 0;
   font-size: 12px;
 }
-
 body {
   width: 100%;
   height: 100%;
@@ -148,6 +147,7 @@ a.btn-outline-light {
 	/*font-size: 12px;*/
   padding: 1.5em 2em;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 a.btn-outline-light:hover {
 	color: #4fb0de;
@@ -1016,6 +1016,9 @@ p.social {
   	    -ms-flex-flow: column nowrap;
   	        flex-flow: column nowrap;
   }
+  #footer .row.no-gutters:last-child {
+  	padding-bottom: 60px;
+  }
   #footer .navbar {
     text-align: center !important;
     -webkit-box-align: center;
@@ -1056,6 +1059,15 @@ p.social {
   .ribbon .container.row div + div{
     margin: .75rem 0;
   }
+  p.social {
+  	font-size: 14px;
+  }
+  p.social a:first-child {
+  	margin-left: 0;
+  }
+  p.social a:last-child {
+  	margin-right: 0;
+  }
   .ribbon button.btn-outline-primary {
   	border: 1px solid #4fb0de;
   }
@@ -1086,8 +1098,9 @@ p.social {
   }
   .banner .banner-item {
     /*min-height: 100vh;*/
-    height: auto;
+    height: 110vh;
     z-index: 0;
+    overflow: hidden;
   }
   /*.banner .banner-inner > div:nth-child(2) {
     z-index: 2;
@@ -1095,15 +1108,18 @@ p.social {
   .banner .banner-item > img {
     position: -webkit-sticky;
     position: sticky;
-    top: 70px;
+    /*top: 70px;*/
     min-width: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    /*height: calc(100vh - 70px);*/
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+       overflow: hidden;
   }
   .banner .container {
     position: relative;
+    display: block;
   	width: 100%;
     /*min-height: 100vh;*/
   	/*flex-flow: row wrap;*/
@@ -1114,8 +1130,19 @@ p.social {
   	/*padding: 50px 0;*/
     /*margin-top: calc(100vh - 0px);*/
     text-align: center;
+    height: 100vh;
+    padding-bottom: 100vh;
+    margin-top: -70px;
   }
+  /*.banner .container#section1 {
+    margin-top: -70px;
+  }
+  .banner .container#section3 {
+    margin-top: 220vh;
+  }*/
   .banner .carousel-caption, .banner .banner-caption {
+    width: 90%;
+    min-height: 40vh;
   	-webkit-box-orient: vertical;
   	-webkit-box-direction: normal;
   	    -ms-flex-flow: column nowrap;
@@ -1123,8 +1150,7 @@ p.social {
   	margin-right: auto;
   	margin-left: auto;
   }
-  .banner .carousel-control-next, .banner .carousel-control-prev {
-  	height: 100vh;
-    bottom: auto;
+  .banner .carousel-caption h1, .banner .banner-caption h1 {
+  	font-size: 9vw;
   }
 }
