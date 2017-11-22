@@ -18,6 +18,60 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 				return $sce.trustAsResourceUrl(mediaUrl);
 			};
 		}
+		// Init ScrollMagic
+	var ctrl = new ScrollMagic.Controller({
+	  globalSceneOptions: {
+	    triggerHook: 'onLeave'
+	  }
+	});
+
+	// Create scene
+	$("section.home-scroll-image").each(function() {
+
+	  var name = $(this).attr('id');
+
+	  new ScrollMagic.Scene({
+	    triggerElement: this
+	  })
+	  .setPin(this)
+	  .addIndicators({
+	    colorStart: "rgba(255,255,255,0.5)",
+	    colorEnd: "rgba(255,255,255,0.5)",
+	    colorTrigger : "rgba(255,255,255,1)",
+	    name:name
+		})
+	  .loglevel(3)
+	  .addTo(ctrl);
+
+	});
+	$("section.home-scroll-content").each(function() {
+
+	  var name = $(this).attr('id');
+
+	  new ScrollMagic.Scene({
+			offset: -350, // offset trigger position by 100px
+	    triggerElement: this
+	  })
+	  .setPin(this)
+	  .addIndicators({
+	    colorStart: "rgba(255,255,255,0.5)",
+	    colorEnd: "rgba(255,255,255,0.5)",
+	    colorTrigger : "rgba(255,255,255,1)",
+	    name:name
+		})
+	  .loglevel(3)
+	  .addTo(ctrl);
+
+	});
+
+	// Get window height
+	var wh = window.innerHeight;
+
+	new ScrollMagic.Scene({
+	  offset: wh*3
+	})
+	.setClassToggle("section#four", "is-active")
+	.addTo(ctrl);
 	//
 	// contentful.entries('content_type=homePage').then(function(res) {
 	// 	// console.log('home page contentful data',res);

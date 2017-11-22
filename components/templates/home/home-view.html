@@ -68,8 +68,13 @@
 </div>
 <div class="banner desktop-hide">
   <div class="banner-inner">
+    <section class="home-scroll-image" id="one">
     <div class="banner-item">
-      <img src="img/ourstory-min.jpg" alt="Our Story" id="parallaximage1">
+      <img src="img/ourstory-min.jpg" alt="Our Story" id="parallaximage1" style="position:sticky;">
+    </div>
+  </section>
+  <section class="home-scroll-content" id="two">
+    <div class="banner-item">
       <div id="section1" class="container">
         <div class="banner-caption">
           <h1>Be a part of our story</h1>
@@ -77,63 +82,39 @@
         </div>
       </div>
     </div>
-    <div class="banner-item">
-      <img src="img/whysc-min.jpg" alt="Why South Carolina?" id="parallaximage2">
-      <div id="section2" class="container">
-        <div class="banner-caption">
-          <h1>Transform lives. Transform yourself.</h1>
-          <a class="btn btn-outline-light" href="#" role="button">Why SC?</a>
-        </div>
-      </div>
-    </div>
-    <div class="banner-item">
-      <img src="img/alumni-min.jpg" alt="Our Alumni" id="parallaximage3">
-      <div id="section3" class="container">
-        <div class="banner-caption">
-          <h1>Long term South Carolina leadership</h1>
-          <a class="btn btn-outline-light" href="#" role="button">Explore</a>
-        </div>
+  </section>
+  <section class="home-scroll-image" id="one">
+  <div class="banner-item">
+    <img src="img/whysc-min.jpg" alt="Our Story" id="parallaximage1" style="position:sticky;">
+  </div>
+</section>
+<section class="home-scroll-content" id="two">
+  <div class="banner-item">
+    <div id="section1" class="container">
+      <div class="banner-caption">
+        <h1>Transform Lives. Transform Yourself.</h1>
+        <a class="btn btn-outline-light" href="#" role="button">Learn More</a>
       </div>
     </div>
   </div>
-  <script>
-  // Create cross browser requestAnimationFrame method:
-  window.requestAnimationFrame = window.requestAnimationFrame
-                                 || window.mozRequestAnimationFrame
-                                 || window.webkitRequestAnimationFrame
-                                 || window.msRequestAnimationFrame
-                                 || function(f){setTimeout(f, 1000/60)}
-
-  var section1 = document.getElementById('section1')
-  var section2 = document.getElementById('section2')
-  var section3 = document.getElementById('section3')
-
-  var scrollheight = 	document.body.scrollHeight // height of entire document
-  var windowheight = window.innerHeight // height of browser window
-
-
-  function parallax(){
-  	var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
-  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 50 // get amount scrolled (in %)
-  	section1.style.top = -scrolltop * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-    section2.style.top = -scrolltop + windowheight + 70 * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-    section3.style.top = -scrolltop + windowheight + windowheight + 70 * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-
-  }
-
-  window.addEventListener('scroll', function(){ // on page scroll
-  	requestAnimationFrame(parallax) // call parallaxbubbles() on next available screen repaint
-  }, false)
-
-  window.addEventListener('resize', function(){ // on window resize
-  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 50 // get amount scrolled (in %)
-  }, false)
-
-
-  </script>
+</section>
+<section class="home-scroll-image" id="one">
+<div class="banner-item">
+  <img src="img/alumni-min.jpg" alt="Our Story" id="parallaximage1" style="position:sticky;">
 </div>
-
-
+</section>
+<section class="home-scroll-content" id="two">
+<div class="banner-item">
+  <div id="section1" class="container">
+    <div class="banner-caption">
+      <h1>Long Term South Carolina Leadership</h1>
+      <a class="btn btn-outline-light" href="#" role="button">Learn More</a>
+    </div>
+  </div>
+</div>
+</section>
+  </div>
+</div>
 <div class="ribbon text-center">
   <div class="container row mx-auto">
     <div class="col-1 mobile-hide"></div>

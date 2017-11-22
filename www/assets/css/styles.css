@@ -162,6 +162,36 @@ a.btn-outline-light:hover {
 	color: #2f8ab6 !important;
 }
 
+/*section {
+  height: 100vh;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+section .inner {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+section#one {
+  background-color: #0089cd;
+}
+
+section#two {
+  background-color: #00679a;
+}
+
+section#three {
+  background-color: #009ae7;
+}
+
+section#four {
+  background-color: #00679a;
+  transition: all 0.4s linear;
+}
+section#four.is-active {
+  background-color: #222222;
+}*/
 
 #header {
   position: fixed;
@@ -1132,7 +1162,7 @@ p.social {
     text-align: center;
     height: 100vh;
     padding-bottom: 100vh;
-    margin-top: -70px;
+    /*margin-top: -70px;*/
   }
   /*.banner .container#section1 {
     margin-top: -70px;
