@@ -1172,7 +1172,7 @@ p.social {
   }*/
   .banner .carousel-caption, .banner .banner-caption {
     width: 90%;
-    min-height: 40vh;
+    min-height: 31vh;
   	-webkit-box-orient: vertical;
   	-webkit-box-direction: normal;
   	    -ms-flex-flow: column nowrap;
