@@ -21,9 +21,9 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 		// Init ScrollMagic
 	var ctrl = new ScrollMagic.Controller({
 	  globalSceneOptions: {
-	    triggerHook: .15
+			duration:0,
+	    triggerHook: .1
 	  },
-		refreshInterval: 100
 	});
 
 	// Create scene
