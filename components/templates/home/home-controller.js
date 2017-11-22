@@ -21,7 +21,7 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 		// Init ScrollMagic
 	var ctrl = new ScrollMagic.Controller({
 	  globalSceneOptions: {
-	    triggerHook: 0.15
+	    triggerHook:0
 	  }
 	});
 
@@ -49,8 +49,8 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 	  var name = $(this).attr('id');
 
 	  new ScrollMagic.Scene({
-			offset: -350, // offset trigger position by 100px
-	    triggerElement: this
+	    triggerElement: this,
+			offset: -250
 	  })
 	  .setPin(this)
 	  .addIndicators({
