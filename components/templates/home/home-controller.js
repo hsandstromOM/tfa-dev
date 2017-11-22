@@ -18,46 +18,46 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 				return $sce.trustAsResourceUrl(mediaUrl);
 			};
 		}
-		// Init ScrollMagic
-	var ctrl = new ScrollMagic.Controller({
-	  globalSceneOptions: {
-			duration:0,
-	    triggerHook: .1
-	  },
-	});
-
-	// Create scene
-	$("section.home-scroll-image").each(function() {
-
-	  var name = $(this).attr('id');
-
-	  new ScrollMagic.Scene({
-	    triggerElement: this
-	  })
-	  .setPin(this)
-	  .addTo(ctrl);
-
-	});
-	$("section.home-scroll-content").each(function() {
-
-	  var name = $(this).attr('id');
-
-	  new ScrollMagic.Scene({
-			offset: -250,
-	    triggerElement: this
-	  })
-	  .setPin(this)
-	  .addTo(ctrl);
-
-	});
-
-	// Get window height
-	var wh = window.innerHeight;
-
-	new ScrollMagic.Scene({
-	  offset: wh*2
-	})
-	.addTo(ctrl);
+	// 	// Init ScrollMagic
+	// var ctrl = new ScrollMagic.Controller({
+	//   globalSceneOptions: {
+	// 		duration:0,
+	//     triggerHook: .1
+	//   },
+	// });
+	//
+	// // Create scene
+	// $("section.home-scroll-image").each(function() {
+	//
+	//   var name = $(this).attr('id');
+	//
+	//   new ScrollMagic.Scene({
+	//     triggerElement: this
+	//   })
+	//   .setPin(this)
+	//   .addTo(ctrl);
+	//
+	// });
+	// $("section.home-scroll-content").each(function() {
+	//
+	//   var name = $(this).attr('id');
+	//
+	//   new ScrollMagic.Scene({
+	// 		// offset: -250,
+	//     triggerElement: this
+	//   })
+	//   .setPin(this)
+	//   .addTo(ctrl);
+	//
+	// });
+	//
+	// // Get window height
+	// var wh = window.innerHeight;
+	//
+	// new ScrollMagic.Scene({
+	//   offset: wh*2
+	// })
+	// .addTo(ctrl);
 	//
 	// contentful.entries('content_type=homePage').then(function(res) {
 	// 	// console.log('home page contentful data',res);

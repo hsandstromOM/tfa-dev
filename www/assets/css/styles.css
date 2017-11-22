@@ -3,6 +3,329 @@
 
 /* GLOBAL TAGS
 -------------------------------------------------- */
+==========================================================================
+  Chrome Frame prompt
+  ========================================================================== */
+
+.chromeframe {
+   margin: 0.2em 0;
+   background: #ccc;
+   color: #000;
+   padding: 0.2em 0;
+}
+
+/* ==========================================================================
+  Author's custom styles
+  ========================================================================== */
+
+html, body {
+   width:100%;
+   height:100%;
+}
+
+.caption {
+   position: absolute;
+   bottom: 5%;
+   right: 5%;
+   text-align: right;
+   color: #fff;
+}
+p, h1 { margin: 0; }
+h1 { margin-bottom: 0.2em; }
+p { line-height: 1.333em; }
+
+/* full width/height container */
+#slides-container {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+/* double the height/width of a viewport */
+#slides {
+   width: 200%;
+   height: 200%;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}
+.slide {
+   position:fixed;
+   bottom:0;
+   left:0;
+   width:100%;
+   height:100%;
+}
+#slide-1 {
+
+   background: url('http://i.imgur.com/7aWoXGR.png') no-repeat center center;
+   background-size: cover;
+   background-attachment: fixed;
+
+}
+#slide-2 {
+
+   background: url('http://i.imgur.com/GkPXSPP.png') no-repeat center center;
+   background-size: cover;
+   background-attachment: fixed;
+   height:0%;
+}
+#slide-3 {
+
+   background: url('http://i.imgur.com/EQabH21.png') no-repeat center center;
+   background-size: cover;
+   background-attachment: fixed;
+   height:0%;
+}
+#slide-3 .caption {
+   left: 5%;
+   right: auto;
+   color: #47373f;
+}
+#slide-4 {
+   height:0%;
+   background: url('http://i.imgur.com/GWz6iqB.png') no-repeat center center;
+   background-size: cover;
+   background-attachment: fixed;
+}
+#slide-4 .caption {
+   right: auto;
+   left: 5%;
+   top: 5%;
+   bottom: auto;
+   color: #47373f;
+}
+
+#helper {
+   position:absolute;
+   left:0;
+   top: 0;
+   height:600%;
+   width: 0;
+}
+.marker {
+   height: 25%;
+   width: 100%;
+}
+.red {
+   background-color: red;
+}
+.green {
+   background-color: green;
+}
+.blue {
+   background-color: blue;
+}
+.yellow {
+   background-color: yellow;
+}
+
+
+/* ==========================================================================
+  Helper classes
+  ========================================================================== */
+
+/*
+* Image replacement
+*/
+
+.ir {
+   background-color: transparent;
+   border: 0;
+   overflow: hidden;
+   /* IE 6/7 fallback */
+   *text-indent: -9999px;
+}
+
+.ir:before {
+   content: "";
+   display: block;
+   width: 0;
+   height: 150%;
+}
+
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+
+.hidden {
+   display: none !important;
+   visibility: hidden;
+}
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+
+.visuallyhidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+   clip: auto;
+   height: auto;
+   margin: 0;
+   overflow: visible;
+   position: static;
+   width: auto;
+}
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+
+.invisible {
+   visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+   content: " "; /* 1 */
+   display: table; /* 2 */
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+/*
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+
+.clearfix {
+   *zoom: 1;
+}
+
+/* ==========================================================================
+  EXAMPLE Media Queries for Responsive Design.
+  These examples override the primary ('mobile first') styles.
+  Modify as content requires.
+  ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+   /* Style adjustments for viewports that meet the condition */
+
+   /* =Caption style */
+   .caption {
+       text-align: right;
+   }
+   #slide-3 .caption,
+   #slide-4 .caption {
+       text-align: left;
+   }
+}
+
+@media print,
+      (-o-min-device-pixel-ratio: 5/4),
+      (-webkit-min-device-pixel-ratio: 1.25),
+      (min-resolution: 120dpi) {
+   /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+  Print styles.
+  Inlined to avoid required HTTP connection: h5bp.com/r
+  ========================================================================== */
+
+@media print {
+   * {
+       background: transparent !important;
+       color: #000 !important; /* Black prints faster: h5bp.com/s */
+       box-shadow: none !important;
+       text-shadow: none !important;
+   }
+
+   a,
+   a:visited {
+       text-decoration: underline;
+   }
+
+   a[href]:after {
+       content: " (" attr(href) ")";
+   }
+
+   abbr[title]:after {
+       content: " (" attr(title) ")";
+   }
+
+   /*
+    * Don't show links for images, or javascript/internal links
+    */
+
+   .ir a:after,
+   a[href^="javascript:"]:after,
+   a[href^="#"]:after {
+       content: "";
+   }
+
+   pre,
+   blockquote {
+       border: 1px solid #999;
+       page-break-inside: avoid;
+   }
+
+   thead {
+       display: table-header-group; /* h5bp.com/t */
+   }
+
+   tr,
+   img {
+       page-break-inside: avoid;
+   }
+
+   img {
+       max-width: 100% !important;
+   }
+
+   @page {
+       margin: 0.5cm;
+   }
+
+   p,
+   h2,
+   h3 {
+       orphans: 3;
+       widows: 3;
+   }
+
+   h2,
+   h3 {
+       page-break-after: avoid;
+   }
+}
+
+/*
+ Ok so you have made it this far, that means you are very keen to on my code.
+ Anyway I don't really mind it. This is a great way to learn so you actually doing the right thing:)
+ Follow me @ihatetomatoes
+*/
+
 html {
   width: 100%;
   height: 100%;
@@ -162,36 +485,6 @@ a.btn-outline-light:hover {
 	color: #2f8ab6 !important;
 }
 
-/*section {
-  height: 100vh;
-  color: white;
-  position: relative;
-  text-align: center;
-}
-section .inner {
-  margin: 0 auto;
-  max-width: 85%;
-}
-
-section#one {
-  background-color: #0089cd;
-}
-
-section#two {
-  background-color: #00679a;
-}
-
-section#three {
-  background-color: #009ae7;
-}
-
-section#four {
-  background-color: #00679a;
-  transition: all 0.4s linear;
-}
-section#four.is-active {
-  background-color: #222222;
-}*/
 
 #header {
   position: fixed;
@@ -1128,16 +1421,16 @@ p.social {
   }
   .banner .banner-item {
     /*min-height: 100vh;*/
-    height: 100vh;
+    height: 110vh;
     z-index: 0;
-    /*overflow: hidden;*/
+    overflow: hidden;
   }
   /*.banner .banner-inner > div:nth-child(2) {
     z-index: 2;
   }*/
   .banner .banner-item > img {
-    /*position: -webkit-sticky;
-    position: sticky;*/
+    position: -webkit-sticky;
+    position: sticky;
     /*top: 70px;*/
     min-width: 0;
     width: 100%;
@@ -1145,7 +1438,7 @@ p.social {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-       /*overflow: hidden;*/
+       overflow: hidden;
   }
   .banner .container {
     position: relative;
@@ -1162,7 +1455,7 @@ p.social {
     text-align: center;
     height: 100vh;
     padding-bottom: 100vh;
-    /*margin-top: -70px;*/
+    margin-top: -70px;
   }
   /*.banner .container#section1 {
     margin-top: -70px;
@@ -1172,7 +1465,7 @@ p.social {
   }*/
   .banner .carousel-caption, .banner .banner-caption {
     width: 90%;
-    min-height: 31vh;
+    min-height: 40vh;
   	-webkit-box-orient: vertical;
   	-webkit-box-direction: normal;
   	    -ms-flex-flow: column nowrap;
