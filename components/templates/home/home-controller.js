@@ -21,7 +21,7 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 		// Init ScrollMagic
 	var ctrl = new ScrollMagic.Controller({
 	  globalSceneOptions: {
-	    triggerHook: 'onLeave'
+	    triggerHook: 0.15
 	  }
 	});
 

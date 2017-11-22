@@ -1128,16 +1128,16 @@ p.social {
   }
   .banner .banner-item {
     /*min-height: 100vh;*/
-    height: 110vh;
+    height: 100vh;
     z-index: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
   /*.banner .banner-inner > div:nth-child(2) {
     z-index: 2;
   }*/
   .banner .banner-item > img {
-    position: -webkit-sticky;
-    position: sticky;
+    /*position: -webkit-sticky;
+    position: sticky;*/
     /*top: 70px;*/
     min-width: 0;
     width: 100%;
@@ -1145,7 +1145,7 @@ p.social {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-       overflow: hidden;
+       /*overflow: hidden;*/
   }
   .banner .container {
     position: relative;
