@@ -21,8 +21,9 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 		// Init ScrollMagic
 	var ctrl = new ScrollMagic.Controller({
 	  globalSceneOptions: {
-	    triggerHook:0
-	  }
+	    triggerHook: .15
+	  },
+		refreshInterval: 100
 	});
 
 	// Create scene
@@ -34,13 +35,6 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 	    triggerElement: this
 	  })
 	  .setPin(this)
-	  .addIndicators({
-	    colorStart: "rgba(255,255,255,0.5)",
-	    colorEnd: "rgba(255,255,255,0.5)",
-	    colorTrigger : "rgba(255,255,255,1)",
-	    name:name
-		})
-	  .loglevel(3)
 	  .addTo(ctrl);
 
 	});
@@ -49,17 +43,10 @@ function HomeController($scope, $state, store, $window, contentful, $http) {
 	  var name = $(this).attr('id');
 
 	  new ScrollMagic.Scene({
-	    triggerElement: this,
-			offset: -250
+			offset: -250,
+	    triggerElement: this
 	  })
 	  .setPin(this)
-	  .addIndicators({
-	    colorStart: "rgba(255,255,255,0.5)",
-	    colorEnd: "rgba(255,255,255,0.5)",
-	    colorTrigger : "rgba(255,255,255,1)",
-	    name:name
-		})
-	  .loglevel(3)
 	  .addTo(ctrl);
 
 	});
