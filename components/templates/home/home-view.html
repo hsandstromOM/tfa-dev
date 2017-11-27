@@ -66,74 +66,47 @@
        <span class="sr-only">Next</span>
      </a>
 </div>
-<div class="banner desktop-hide">
-  <div class="banner-inner">
-    <div class="banner-item">
-      <img src="img/ourstory-min.jpg" alt="Our Story" id="parallaximage1">
-      <div id="section1" class="container">
-        <div class="banner-caption">
-          <h1>Be a part of our story</h1>
-          <a class="btn btn-outline-light" href="#" role="button">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="banner-item">
-      <img src="img/whysc-min.jpg" alt="Why South Carolina?" id="parallaximage2">
-      <div id="section2" class="container">
-        <div class="banner-caption">
-          <h1>Transform lives. Transform yourself.</h1>
-          <a class="btn btn-outline-light" href="#" role="button">Why SC?</a>
-        </div>
-      </div>
-    </div>
-    <div class="banner-item">
-      <img src="img/alumni-min.jpg" alt="Our Alumni" id="parallaximage3">
-      <div id="section3" class="container">
-        <div class="banner-caption">
-          <h1>Long term South Carolina leadership</h1>
-          <a class="btn btn-outline-light" href="#" role="button">Explore</a>
-        </div>
+<div id="verticalCarouselExample" class="carousel vertical banner slide desktop-hide" data-ride="carousel" data-interval="4000">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <div class="mobile-carousel-background" style="background: url('/img/ourstory-min.jpg')center no-repeat;">
+      <div class="carousel-caption container element-to-animate">
+        <h1>Be a part of our story</h1>
+        <a class="btn btn-outline-light" href="#" role="button">Learn More</a>
       </div>
     </div>
   </div>
-  <script>
-  // Create cross browser requestAnimationFrame method:
-  window.requestAnimationFrame = window.requestAnimationFrame
-                                 || window.mozRequestAnimationFrame
-                                 || window.webkitRequestAnimationFrame
-                                 || window.msRequestAnimationFrame
-                                 || function(f){setTimeout(f, 1000/100)}
-
-  var section1 = document.getElementById('section1')
-  var section2 = document.getElementById('section2')
-  var section3 = document.getElementById('section3')
-
-  var scrollheight = 	document.body.scrollHeight // height of entire document
-  var windowheight = window.innerHeight // height of browser window
-
-
-  function parallax(){
-  	var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
-  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 100 // get amount scrolled (in %)
-  	section1.style.top = -scrolltop * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-    section2.style.top = -scrolltop + windowheight + 70 * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-    section3.style.top = -scrolltop + windowheight + windowheight + 70 * 1.4 + 'px' // move bubble1 at 140% of scroll speed
-
-  }
-
-  window.addEventListener('scroll', function(){ // on page scroll
-  	requestAnimationFrame(parallax) // call parallaxbubbles() on next available screen repaint
-  }, false)
-
-  window.addEventListener('resize', function(){ // on window resize
-  	var scrollamount = (scrolltop / (scrollheight-windowheight)) * 100 // get amount scrolled (in %)
-  }, false)
-
-
-  </script>
+  <div class="carousel-item">
+    <div class="mobile-carousel-background" style="background: url('/img/whysc-min.jpg')top center no-repeat" >
+      <div class="carousel-caption container element-to-animate">
+        <h1>Transform lives. Transform yourself.</h1>
+        <a class="btn btn-outline-light" href="#" role="button">Why SC?</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="mobile-carousel-background" style="background: url('/img/alumni-min.jpg') top right no-repeat">
+      <div class="carousel-caption container element-to-animate">
+        <h1>Long term South Carolina leadership</h1>
+        <a class="btn btn-outline-light" href="#" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
 </div>
-
-
+<ol class="carousel-indicators">
+    <li data-target="#verticalCarouselExample" data-slide-to="0" class="active"></li>
+    <li data-target="#verticalCarouselExample" data-slide-to="1"></li>
+    <li data-target="#verticalCarouselExample" data-slide-to="2"></li>
+</ol>
+<!-- <a class="carousel-control-prev" data-target="#verticalCarouselExample" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+   </a> -->
+<a class="carousel-control-next"  style="width:100%; top:70vh;" data-target="#verticalCarouselExample" role="button" data-slide="next">
+     <span class="fa fa-2x fa-caret-down" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+</div>
 <div class="ribbon text-center">
   <div class="container row mx-auto">
     <div class="col-1 mobile-hide"></div>
