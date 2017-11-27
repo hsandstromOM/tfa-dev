@@ -32,6 +32,7 @@ angular.module('app', [
             $stateProvider
                 .state('site', require('./components/layout'))
                 .state('site.home', require('./components/templates/home/home-controller'))
+                .state('site.our-story', require('./components/templates/our-story/our-story-controller'))
 
             $locationProvider.html5Mode({
                 enabled: true,

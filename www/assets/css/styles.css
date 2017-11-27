@@ -848,6 +848,105 @@ p.social {
 	width: 10%;
 }
 
+/* OUR-STORY
+-------------------------------------------------- */
+
+#ourStoryPage h1 ,#ourStoryPage h2 {
+  padding: 20% 0 0 0;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+#ourStoryPage p {
+  text-align: center;
+  color: rgba(242, 242, 242, 0.5);
+}
+
+#ourStoryPage strong {
+  color: #fff;
+}
+
+#ourStoryPage section {
+  width: 100%;
+  height:100vh;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+#ourStoryPage section#one {
+  background-color: rgb(239, 201, 88);
+}
+#ourStoryPage section#two {
+  background-color: rgb(239, 201, 88);
+  transition: all 1s;
+}
+#ourStoryPage section#two.is-active {
+  background-color: rgb(79, 176, 222);
+}
+#ourStoryPage section#three {
+   background-color: rgb(79, 176, 222);
+  transition: all 1s;
+}
+#ourStoryPage section#three.is-active {
+  background-color: rgb(79, 176, 222);
+}
+#ourStoryPage section#four {
+  background-color: rgb(79, 176, 222);
+  transition: all 1s;
+}
+#ourStoryPage section#four.is-active {
+    background-color: rgb(239, 201, 88);
+}
+#ourStoryPage section .inner {
+  margin: 0 auto;
+  max-width: 85%;
+}
+#ourStoryPage img{
+  width:100%;
+}
+
+#ourStoryPage .blue {
+    background-color: rgb(79, 176, 222);
+}
+#ourStoryPage .orange {
+    width:100%;
+    background-color: rgb(239, 201, 88);
+}
+#ourStoryPage .white {
+    width:100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#ourStoryPage section {
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 500px) {
+  #ourStoryPage section {
+    -webkit-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /*#ourStoryPage section {
+    margin-right: 0;
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }*/
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
