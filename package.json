@@ -80,7 +80,7 @@
     "superagent": "^3.6.0",
     "uglify-js": "^2.8.29",
     "underscore": "^1.8.3",
-    "webpack": "^1.13.2",
+    "webpack": "^2.2.0",
     "webpack-error-notification": "^0.1.6",
     "xhr": "^2.1.0"
   },
