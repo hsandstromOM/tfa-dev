@@ -66,8 +66,8 @@
     "nodemailer-sendgrid-transport": "^0.2.0",
     "palmettoflow-event": "^1.1.2",
     "palmettoflow-nodejs": "^1.0.1",
-    "pouchdb": "^5.0.0",
-    "prerender-node": "^2.5.0",
+    "pouchdb": "^6.3.0",
+    "prerender-node": "^3.0.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     "raw-loader": "^0.5.1",
     "resolve-url": "^0.2.1",
@@ -82,7 +82,8 @@
     "underscore": "^1.8.3",
     "webpack": "^1.13.2",
     "webpack-error-notification": "^0.1.6",
-    "xhr": "^2.1.0"
+    "xhr": "^2.1.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
@@ -105,6 +106,9 @@
     "start": "node server.js",
     "dev": "webpack --watch & nodemon server.js",
     "prod": "webpack -p",
-    "build-css": "node-sass --include-path scss scss/*.scss www/main.css"
-  }
+    "build-css": "node-sass --include-path scss scss/*.scss www/main.css",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
